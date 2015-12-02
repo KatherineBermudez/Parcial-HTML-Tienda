@@ -1,0 +1,135 @@
+//
+// General layout rules
+//
+
+.avarage-reviews {
+  background: url("../img/star.ico") repeat 100%;
+  width: 100px;
+  height: 20px;
+  background-size: 20px;
+  float: right;
+}
+
+.item {
+   @include outer-container($max-width);
+   font-family: $font;
+}
+
+.item-details{
+  @include span-columns(12);
+
+	.item-images {
+    @include span-columns(6);
+    text-align: center;
+    > h2, .item-category {
+      text-align: left;
+    }
+    > h2 {
+      @include font-size(18);
+    }
+    .item-category{
+      @include font-size(16);
+    }
+    .tumbnails-fullsize{
+      @include span-columns(12);
+      margin-top: $separator-top;
+    }
+    .tumbnails {
+      @include span-columns(4);
+      img{
+        box-shadow: 0px 0px 5px 1px #000;
+      }
+    }
+  }
+
+  .item-summary {
+    @include span-columns(6);
+    margin-top: 3%;
+    h2 {
+      @include font-size(16);
+    }
+    .item-features {
+      @include span-columns(8);
+      li {
+        @include font-size(14);
+      }
+    }
+    .price {
+      @include span-columns(6);
+      @include font-size(24);
+      margin: 3% 0px;
+    }
+    /* .avarage-reviews {
+      background: url("../img/star.ico") repeat 100%;
+      width: 100px;
+      height: 20px;
+      background-size: 20px;
+    } */
+    .newest-review{
+      @include font-size(14);
+      @include span-columns(12);
+      border-radius: 3px;
+      border: 2px solid #000;
+      @include pad(2% default);
+    }
+  }
+}
+
+.item-description {
+  @include span-columns(12);
+  margin-top: $separator-top;
+}
+
+.item-video {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+.related-items {
+  @include span-columns(12);
+  margin-top: $separator-top;
+  .related-preview li {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}
+
+.reviews {
+  @include span-columns(12);
+  margin-top: $separator-top;
+  .user-review {
+    @include span-columns(12);
+  }
+  .user-photo {
+    @include span-columns(4);
+    text-align: center;
+  }
+  .user-rev-data {
+    @include span-columns(8);
+    .rev-title {
+      @include span-columns(4);
+    }
+    .avarage-reviews {
+      float: left;
+    }
+    .rev-text {
+      @include span-columns(8);
+    }
+    .rev-submit {
+      @include span-columns(4);
+      @include pad(7%);
+      @include font-size(18);
+    }
+  }
+  .lastest-reviews {
+    @include span-columns(12);
+    margin-top: $separator-top;
+    .lastest-reviews-info {
+      @include span-columns(8);
+      margin-top: 2%;
+    }
+    h2 {
+      @include font-size(18);
+    }
+  }
+}
